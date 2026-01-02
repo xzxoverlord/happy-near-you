@@ -24,14 +24,12 @@ body {
   text-align: center;
 }
 
-/* ===== BỐ CỤC NGHỆ THUẬT ===== */
+/* ===== CHỮ NGHỆ THUẬT ===== */
 .headline {
-  position: relative;
   line-height: 1;
   margin-bottom: 20px;
 }
 
-/* Happy New Year */
 .happy {
   font-family: 'Great Vibes', cursive;
   font-size: 34px;
@@ -41,7 +39,6 @@ body {
   animation: fadeUp 1.2s ease forwards;
 }
 
-/* 2026 nghệ thuật */
 .year {
   font-size: 96px;
   font-weight: 700;
@@ -65,7 +62,6 @@ body {
   animation-delay: 0.4s;
 }
 
-/* Lời chúc */
 .message {
   font-size: 14px;
   line-height: 1.7;
@@ -87,7 +83,6 @@ body {
   }
 }
 
-/* Lấp lánh nhẹ */
 @keyframes shimmer {
   0% {
     background-position: 0% center;
@@ -97,35 +92,56 @@ body {
   }
 }
 
-/* ===== HOA ĐÀO ===== */
+/* ===== HOA ĐÀO DÀY HƠN ===== */
 .petals span {
   position: absolute;
-  top: -10%;
-  width: 12px;
-  height: 12px;
+  top: -15%;
+  width: 10px;
+  height: 10px;
   background: #f4a6b8;
   border-radius: 50% 50% 50% 0;
   transform: rotate(45deg);
-  opacity: 0.85;
+  opacity: 0.9;
   animation: fall linear infinite;
 }
 
-.petals span:nth-child(1)  { left: 8%;  animation-duration: 10s; }
-.petals span:nth-child(2)  { left: 18%; animation-duration: 12s; animation-delay: 2s; }
-.petals span:nth-child(3)  { left: 28%; animation-duration: 9s; }
-.petals span:nth-child(4)  { left: 38%; animation-duration: 11s; animation-delay: 3s; }
-.petals span:nth-child(5)  { left: 48%; animation-duration: 10s; }
-.petals span:nth-child(6)  { left: 58%; animation-duration: 13s; animation-delay: 1s; }
-.petals span:nth-child(7)  { left: 68%; animation-duration: 9s;  animation-delay: 4s; }
-.petals span:nth-child(8)  { left: 78%; animation-duration: 12s; }
-.petals span:nth-child(9)  { left: 88%; animation-duration: 10s; animation-delay: 2s; }
-.petals span:nth-child(10) { left: 95%; animation-duration: 14s; }
+/* Phân bố ngẫu nhiên */
+.petals span:nth-child(odd) {
+  width: 12px;
+  height: 12px;
+  opacity: 0.8;
+}
+
+.petals span:nth-child(1)  { left: 4%;  animation-duration: 9s; }
+.petals span:nth-child(2)  { left: 8%;  animation-duration: 12s; animation-delay: 1s; }
+.petals span:nth-child(3)  { left: 12%; animation-duration: 10s; }
+.petals span:nth-child(4)  { left: 18%; animation-duration: 13s; animation-delay: 2s; }
+.petals span:nth-child(5)  { left: 24%; animation-duration: 9s; }
+.petals span:nth-child(6)  { left: 30%; animation-duration: 14s; animation-delay: 3s; }
+.petals span:nth-child(7)  { left: 36%; animation-duration: 10s; }
+.petals span:nth-child(8)  { left: 42%; animation-duration: 12s; animation-delay: 1s; }
+.petals span:nth-child(9)  { left: 48%; animation-duration: 9s; }
+.petals span:nth-child(10) { left: 54%; animation-duration: 13s; animation-delay: 2s; }
+.petals span:nth-child(11) { left: 60%; animation-duration: 10s; }
+.petals span:nth-child(12) { left: 66%; animation-duration: 14s; animation-delay: 1s; }
+.petals span:nth-child(13) { left: 72%; animation-duration: 9s; }
+.petals span:nth-child(14) { left: 78%; animation-duration: 12s; animation-delay: 3s; }
+.petals span:nth-child(15) { left: 84%; animation-duration: 10s; }
+.petals span:nth-child(16) { left: 90%; animation-duration: 14s; animation-delay: 2s; }
+.petals span:nth-child(17) { left: 6%;  animation-duration: 11s; }
+.petals span:nth-child(18) { left: 16%; animation-duration: 13s; animation-delay: 4s; }
+.petals span:nth-child(19) { left: 26%; animation-duration: 9s; }
+.petals span:nth-child(20) { left: 46%; animation-duration: 12s; animation-delay: 2s; }
+.petals span:nth-child(21) { left: 56%; animation-duration: 10s; }
+.petals span:nth-child(22) { left: 76%; animation-duration: 14s; animation-delay: 1s; }
+.petals span:nth-child(23) { left: 86%; animation-duration: 9s; }
+.petals span:nth-child(24) { left: 96%; animation-duration: 15s; animation-delay: 3s; }
 
 @keyframes fall {
   0% {
     transform: translateY(0) rotate(45deg);
   }
   100% {
-    transform: translateY(120vh) rotate(405deg);
+    transform: translateY(130vh) rotate(420deg);
   }
 }
