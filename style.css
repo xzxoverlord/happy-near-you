@@ -7,7 +7,7 @@ body {
   height: 100vh;
   background: #ffffff;
   overflow: hidden;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Playfair Display', serif;
   color: #222;
 }
 
@@ -16,38 +16,78 @@ body {
   position: relative;
   z-index: 2;
   height: 100%;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 24px;
 }
 
-/* Text animation */
-.title {
+/* ===== BỐ CỤC NGHỆ THUẬT ===== */
+.headline {
+  position: relative;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+/* Happy New Year */
+.happy {
   font-family: 'Great Vibes', cursive;
-  font-size: 42px;
-  letter-spacing: 2px;
-  margin-bottom: 18px;
+  font-size: 34px;
+  display: block;
+  margin-bottom: -10px;
   opacity: 0;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+/* 2026 nghệ thuật */
+.year {
+  font-size: 96px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  display: block;
 
   background: linear-gradient(
-    110deg,
-    #e8b6c9 25%,
-    #f7dbe6 37%,
-    #e8b6c9 63%
+    120deg,
+    #8b0000,
+    #b11226,
+    #6d0022
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
+  opacity: 0;
   animation:
     fadeUp 1.2s ease forwards,
-    shimmer 4s linear infinite,
-    wave 3s ease-in-out infinite;
+    shimmer 5s linear infinite;
+  animation-delay: 0.4s;
 }
 
+/* Lời chúc */
+.message {
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 280px;
+  opacity: 0;
+  animation: fadeUp 1.2s ease forwards;
+  animation-delay: 1s;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Lấp lánh nhẹ */
 @keyframes shimmer {
   0% {
     background-position: 0% center;
@@ -57,60 +97,29 @@ body {
   }
 }
 
-@keyframes wave {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
-
-
-.message {
-  font-size: 14px;
-  line-height: 1.6;
-  max-width: 280px;
-  opacity: 0;
-  animation: fadeUp 1.2s ease forwards;
-  animation-delay: 0.6s;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Hoa đào rơi */
+/* ===== HOA ĐÀO ===== */
 .petals span {
   position: absolute;
   top: -10%;
   width: 12px;
   height: 12px;
-  background: #f5b7c7;
+  background: #f4a6b8;
   border-radius: 50% 50% 50% 0;
   transform: rotate(45deg);
-  opacity: 0.8;
+  opacity: 0.85;
   animation: fall linear infinite;
 }
 
-.petals span:nth-child(1) { left: 10%; animation-duration: 10s; }
-.petals span:nth-child(2) { left: 20%; animation-duration: 12s; animation-delay: 2s; }
-.petals span:nth-child(3) { left: 30%; animation-duration: 9s; }
-.petals span:nth-child(4) { left: 40%; animation-duration: 11s; animation-delay: 3s; }
-.petals span:nth-child(5) { left: 50%; animation-duration: 10s; }
-.petals span:nth-child(6) { left: 60%; animation-duration: 13s; animation-delay: 1s; }
-.petals span:nth-child(7) { left: 70%; animation-duration: 9s; animation-delay: 4s; }
-.petals span:nth-child(8) { left: 80%; animation-duration: 12s; }
-.petals span:nth-child(9) { left: 90%; animation-duration: 10s; animation-delay: 2s; }
-.petals span:nth-child(10){ left: 95%; animation-duration: 14s; }
+.petals span:nth-child(1)  { left: 8%;  animation-duration: 10s; }
+.petals span:nth-child(2)  { left: 18%; animation-duration: 12s; animation-delay: 2s; }
+.petals span:nth-child(3)  { left: 28%; animation-duration: 9s; }
+.petals span:nth-child(4)  { left: 38%; animation-duration: 11s; animation-delay: 3s; }
+.petals span:nth-child(5)  { left: 48%; animation-duration: 10s; }
+.petals span:nth-child(6)  { left: 58%; animation-duration: 13s; animation-delay: 1s; }
+.petals span:nth-child(7)  { left: 68%; animation-duration: 9s;  animation-delay: 4s; }
+.petals span:nth-child(8)  { left: 78%; animation-duration: 12s; }
+.petals span:nth-child(9)  { left: 88%; animation-duration: 10s; animation-delay: 2s; }
+.petals span:nth-child(10) { left: 95%; animation-duration: 14s; }
 
 @keyframes fall {
   0% {
