@@ -11,6 +11,30 @@ body {
   color: #222;
 }
 
+/* ===== NỀN HỌA TIẾT LINE VÀNG KIM ===== */
+.bg-lines {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(198, 160, 74, 0.08) 0px,
+      rgba(198, 160, 74, 0.08) 1px,
+      transparent 1px,
+      transparent 28px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(198, 160, 74, 0.05) 0px,
+      rgba(198, 160, 74, 0.05) 1px,
+      transparent 1px,
+      transparent 36px
+    );
+}
+
 /* Layout */
 .container {
   position: relative;
