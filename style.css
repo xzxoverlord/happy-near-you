@@ -11,28 +11,23 @@ body {
   color: #222;
 }
 
-/* ===== NỀN HỌA TIẾT LINE VÀNG KIM ===== */
-.bg-lines {
+/* ===== NỀN LINE CONG TỰ NHIÊN ===== */
+.bg-curves {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
+}
 
-  background:
-    repeating-linear-gradient(
-      135deg,
-      rgba(198, 160, 74, 0.08) 0px,
-      rgba(198, 160, 74, 0.08) 1px,
-      transparent 1px,
-      transparent 28px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      rgba(198, 160, 74, 0.05) 0px,
-      rgba(198, 160, 74, 0.05) 1px,
-      transparent 1px,
-      transparent 36px
-    );
+.bg-curves svg {
+  width: 100%;
+  height: 100%;
+}
+
+.bg-curves path {
+  fill: none;
+  stroke: rgba(198, 160, 74, 0.18); /* vàng kim mờ */
+  stroke-width: 1.2;
 }
 
 /* Layout */
@@ -108,15 +103,18 @@ body {
 }
 
 @keyframes shimmer {
-  0% {
-    background-position: 0% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
 
-/* ===== HOA ĐÀO DÀY HƠN ===== */
+/* ===== HOA ĐÀO ===== */
+.petals {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .petals span {
   position: absolute;
   top: -15%;
@@ -129,13 +127,13 @@ body {
   animation: fall linear infinite;
 }
 
-/* Phân bố ngẫu nhiên */
 .petals span:nth-child(odd) {
   width: 12px;
   height: 12px;
   opacity: 0.8;
 }
 
+/* phân bố */
 .petals span:nth-child(1)  { left: 4%;  animation-duration: 9s; }
 .petals span:nth-child(2)  { left: 8%;  animation-duration: 12s; animation-delay: 1s; }
 .petals span:nth-child(3)  { left: 12%; animation-duration: 10s; }
